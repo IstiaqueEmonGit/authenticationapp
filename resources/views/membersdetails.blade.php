@@ -16,6 +16,7 @@
                             <x-table-column>Name</x-table-column>
                             <x-table-column>Email</x-table-column>
                             <x-table-column>Account Created At</x-table-column>
+                            <x-table-column>LogHistory</x-table-column>
 
                         </tr>
                     </thead>
@@ -26,6 +27,7 @@
                              <x-table-column>{{$member->name}}</x-table-column>
                              <x-table-column>{{$member->email}}</x-table-column>
                              <x-table-column>{{$member->created_at}}</x-table-column>
+                             <x-table-column><a href="{{route('logininfo',$member->id)}}"><x-button class="ml-3"> {{ __('Click Here') }} </x-button></a></x-table-column>
                       
                         </tr>
                         @endforeach

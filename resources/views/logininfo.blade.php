@@ -12,17 +12,17 @@
                     <table class="w-full whitespace-nowrap">
                     <thead >
                         <tr>
-                            <x-table-column>Last Login Id</x-table-column>
                             <x-table-column>Name</x-table-column>
-                            <x-table-column>Logged_in_at</x-table-column>
+                            <x-table-column>Last_Logged_in_at</x-table-column>
+                            <x-table-column>Logged_out_at</x-table-column>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($datas as $data)
                         <tr>
-                             <x-table-column>{{$data->id}}</x-table-column>
                              <x-table-column>{{$data->name}}</x-table-column>
                              <x-table-column>{{$data->logged_in_at}}</x-table-column>
+                             <x-table-column>{{$data->logged_out_at}}</x-table-column>
                       
                         </tr>
                         @endforeach

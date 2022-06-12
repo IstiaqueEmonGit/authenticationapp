@@ -11,6 +11,7 @@ class Logininfo extends Model
     protected $table = 'logininfos';
     protected $fillable =[
         'logged_in_at',
+        'logged_out_at'
     ];
     public function user()
     {

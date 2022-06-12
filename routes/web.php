@@ -25,5 +25,5 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/logininfo', [Login_info_controller::class, 'logininfo'])->middleware(['auth'])->name('logininfo');
+Route::get('/logininfo/{id}', [Login_info_controller::class, 'logininfo'])->middleware(['auth'])->name('logininfo');
 Route::get('/membersdetails', [Members_details::class, 'membersdetails'])->middleware(['auth'])->name('membersdetails');
